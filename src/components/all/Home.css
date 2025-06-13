@@ -1,0 +1,195 @@
+/* Reset básico y tipografía */
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+  
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #cdeac0;
+}
+
+.nav-button {
+    background-color: #cdeac0;
+    color: #1a421d;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #b2d8a5;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/assets/bg-plants.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/**/
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 12px;
+    color: #fff;
+    max-width: 700px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-button {
+    background-color: #cdeac0;
+    color: #1a421d;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #a9d196;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+
+.feature-card {
+    flex: 1 1 calc(33.333% - 2rem);
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.feature-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #1a421d;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        flex: 1 1 100%;
+    }
+
+    .hero {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1400px; /* más ancho para pantallas grandes */
+        padding: 0 2rem;   /* un poco más de padding */
+    }
+
+    .features {
+        gap: 3rem; /* más espacio entre tarjetas */
+    }
+
+    .hero-text {
+        max-width: 900px; /* texto más ancho para hero */
+    }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+    .features {
+        flex-direction: row; /* mantiene fila */
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        flex: 1 1 calc(50% - 1.5rem); /* dos tarjetas por fila */
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem; /* tamaño intermedio */
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+}

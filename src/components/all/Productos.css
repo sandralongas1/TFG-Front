@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    gap: 24px; /* espacio entre filtros y productos */
+}
+
+.productos-filter {
+    flex: 0 0 180px; /* ancho fijo */
+}
+
+.productos-container {
+    flex: 1; /* ocupa el resto del espacio */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}

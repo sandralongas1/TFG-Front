@@ -1,0 +1,67 @@
+/* Contenedor de fondo centrado */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0fdf4; /* verde claro */
+}
+
+/* Formulario */
+.login-form {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Inputs */
+.login-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Botón */
+.login-button {
+  width: 50%;
+  background-color: #16a34a; /* verde 600 */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #15803d; /* verde 700 */
+}
+
+/* Mensaje de error */
+.login-error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.registro {
+  margin-top: 20px;
+}

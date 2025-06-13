@@ -1,0 +1,75 @@
+.user-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+  
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.user-table th {
+    background-color: #16a34a;
+    color: white;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#acciones {
+    display: flex;
+    gap: 2px;
+}
+
+.btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnDelete {
+    background-color: #cf4545;
+    color: white;
+}
+
+.btnDelete:hover {
+    background-color: #ac2c2c;
+}
+
+.btnEdit {
+    background-color: #f1d255;
+    color: white;
+}
+
+.btnEdit:hover {
+    background-color: #ffcc00;
+}
+  
+.btnAdd {
+    width: 50%;
+    background-color: #16a34a; /* verde 600 */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+  }
+  
+.btnAdd:hover {
+    background-color: #15803d; /* verde 700 */
+}

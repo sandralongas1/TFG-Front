@@ -1,0 +1,121 @@
+.cabecera {
+  position: fixed; /* Hace que la cabecera se mantenga fija */
+  top: 0; /* Se fija en la parte superior */
+  left: 0;
+  width: 100%; /* Ocupar todo el ancho */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(35, 97, 45);
+  padding: 15px 20px;
+  border-bottom: 4px solid #407025;
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+  
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+  background-color: #fff; /* O el fondo que quieras */
+}
+
+.logo {
+  max-width: 300px; /* Ajusta según el tamaño que desees */
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Menú */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu > li {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu > li:hover {
+  background-color: #e0f7ec;
+  border-radius: 5px;
+}
+
+/* Submenú oculto por defecto */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Mostrar submenú al pasar el ratón */
+.menu > li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submenu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Usuario */
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 40px;
+}
+
+.usuario-nombre {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#btnsCabecera button {
+  width: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+}
+
+#btnsCabecera button:hover {
+  background-color: #e0f7ec;
+  border-radius: 5px;
+}
+
+.logout-btn {
+  width: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #e0f7ec;
+  border-radius: 5px;
+}
