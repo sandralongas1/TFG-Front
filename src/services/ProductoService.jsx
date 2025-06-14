@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/producto";
+const API_URL = import.meta.env.VITE_API_URL + "/producto";
 
 export async function producto_listar() {
   try {

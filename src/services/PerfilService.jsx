@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/perfil";
+const API_URL = import.meta.env.VITE_API_URL + "/perfil";
 
 export async function perfil_listar() {
   try {
