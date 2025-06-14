@@ -10,7 +10,7 @@ body, html{
 .frontal {
     width: 100%;
     height: 400px;
-    background: url('../../../public/img/frontal.jpg') center/cover no-repeat;
+    background: url('/img/frontal.jpg') center/cover no-repeat;
     /* display: flex; */
     align-items: center;
     justify-content: center;
@@ -60,15 +60,15 @@ body, html{
 /* Features Section */
 /* Fondo específico por tarjeta */
 .feature-card:nth-child(1) {
-    background-image: url('../../../public/img/aromati.jpg'); /* Planta autóctona */
-    
-  }
-  .feature-card:nth-child(2) {
-    background-image: url('../../../public/img/helecho.jpg'); /* Planta tropical */
-  }
-  .feature-card:nth-child(3) {
-    background-image: url('../../../public/img/cactus.jpg'); /* Consejos */
-  }
+    background-image: url('/img/aromati.jpg'); /* Planta autóctona */
+}
+.feature-card:nth-child(2) {
+    background-image: url('/img/helecho.jpg'); /* Planta tropical */
+}
+.feature-card:nth-child(3) {
+    background-image: url('/img/cactus.jpg'); /* Consejos */
+}
+
 .features {
     display: flex;
     justify-content: space-between;

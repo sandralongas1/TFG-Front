@@ -37,7 +37,7 @@ function Cabecera() {
       {/* Menú de navegación alineado a la izquierda */}
       <nav>
         <div className="logo-container">
-          <img src="../../../public/img/loveplantlogo.png" className="logo" onClick={() => navigate("/")} />
+          <img src="/img/loveplantlogo.png" className="logo" onClick={() => navigate("/")} />
           <ul className="menu">
             <li onClick={() => navigate("/productos?idCategoria=1")}>Plantas de Interior</li>
             <li onClick={() => navigate("/productos?idCategoria=2")}>Plantas de Exterior</li>

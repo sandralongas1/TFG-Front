@@ -23,7 +23,7 @@ const ProductoCard = ({ producto }) => {
               className="imagen-producto" /> 
           ) : (
             <img
-              src="../../../public/img/no-image.png"
+              src="/img/no-image.png"
               alt={producto.titulo}
               className="imagen-producto" /> 
           )
