@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    gap: 24px; /* espacio entre filtros y productos */
+    gap: 0px; /* espacio entre filtros y productos */
 }
 
 .productos-filter {
@@ -10,7 +10,28 @@
 .productos-container {
     flex: 1; /* ocupa el resto del espacio */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 0px;
 }
+
+@media (max-width: 1200px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+  
+    .productos-filter {
+      width: 100%;
+      margin-bottom: 20px; /* espacio abajo */
+      text-align: center;
+    }
+  
+    .productos-container {
+      width: 100%;
+    }
+  }
+  

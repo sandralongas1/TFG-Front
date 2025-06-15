@@ -48,13 +48,13 @@ const SubcategoriasFiltro = ({ idCategoria, grupo, onChange }) => {
       <ul style={{ maxHeight: "300px", overflowY: "auto", paddingLeft: "0" }}>
         {subcategorias.map((subcategoria) => (
           <li key={subcategoria.id} style={{ listStyle: "none", marginBottom: "8px" }}>
-            <label style={{ display: "flex", alignItems: "center", gap: "8px", cursor: "pointer" }}>
+            <label style={{ cursor: "pointer" }}>
               <input
                 type="checkbox"
                 checked={seleccionadas.includes(subcategoria.id)}
                 onChange={() => manejarCambio(subcategoria.id)}
               />
-              <span>{subcategoria.descripcion}</span>
+              <span style={{ marginLeft: "10px" }}>{subcategoria.descripcion}</span>
             </label>
           </li>
         ))}

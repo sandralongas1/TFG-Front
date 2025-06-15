@@ -1,0 +1,28 @@
+.usuario-detalle-container {
+  max-width: 600px;
+  margin: 100px auto 40px auto; /* espacio por cabecera sticky */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.usuario-detalle-container h2 {
+  text-align: center;
+  color: #234122;
+  margin-bottom: 20px;
+}
+
+.usuario-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1rem;
+}
+
+.usuario-datos div {
+  background-color: #ffffff;
+  padding: 10px;
+  border-left: 4px solid #407025;
+  border-radius: 4px;
+}

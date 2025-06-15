@@ -28,6 +28,14 @@ export default function Login() {
           localStorage.setItem("TFC_usuario", `${data.usuario}`);
           localStorage.setItem("TFC_usuarioNombre", `${data.nombre} ${data.apellidos}`);
           localStorage.setItem("TFC_usuarioRol", data.perfil);
+          let productosFav = localStorage.getItem("TFC_productosFavoritos");
+          if (!productosFav){
+              localStorage.setItem("TFC_productosFavoritos", []);
+          }
+          let carrito = localStorage.getItem("TFC_productosCarrito");
+          if (!carrito){
+              localStorage.setItem("TFC_productosCarrito", []);
+          }
           setMensaje("✅ Login exitoso");
   
           setTimeout(() => {

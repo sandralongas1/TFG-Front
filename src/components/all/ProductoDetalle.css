@@ -17,6 +17,7 @@
 }
 
 .detalle-imagen {
+    margin: 20px;
     width: 300px;
     height: auto;
     object-fit: cover;

@@ -97,7 +97,7 @@ function Usuarios() {
             ))}
           </tbody>
         </table>
-        <button title="Dar de alta un usuario" className="btnAdd" onClick={() => crearUsuario()}>
+        <button title="Dar de alta un usuario" className="btnIconAndText btnAdd" onClick={() => crearUsuario()}>
           <FaUserPlus style={{ marginRight: "8px" }} />
           Añadir usuario
         </button>

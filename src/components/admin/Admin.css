@@ -56,9 +56,8 @@
     background-color: #ffcc00;
 }
   
-.btnAdd {
+.btnIconAndText {
     width: 50%;
-    background-color: #16a34a; /* verde 600 */
     color: white;
     padding: 15px;
     border: none;
@@ -68,7 +67,11 @@
     cursor: pointer;
     transition: background-color 0.2s;
     margin-top: 20px;
-  }
+}
+
+.btnAdd {
+    background-color: #16a34a; /* verde 600 */
+}
   
 .btnAdd:hover {
     background-color: #15803d; /* verde 700 */

@@ -93,7 +93,7 @@ function Productos() {
             ))}
           </tbody>
         </table>
-        <button title="Dar de alta un producto" className="btnAdd" onClick={() => crearProducto()}>
+        <button title="Dar de alta un producto" className="btnIconAndText btnAdd" onClick={() => crearProducto()}>
           <FaUserPlus style={{ marginRight: "8px" }} />
           Añadir producto
         </button>

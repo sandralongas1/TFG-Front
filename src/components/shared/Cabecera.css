@@ -21,7 +21,7 @@
 }
 
 .logo {
-  max-width: 300px; /* Ajusta según el tamaño que desees */
+  max-width: 200px; /* Ajusta según el tamaño que desees */
   width: 100%;
   height: auto;
   cursor: pointer;
@@ -31,7 +31,6 @@
 .menu {
   list-style: none;
   display: flex;
-  gap: 20px;
   padding: 0;
   margin: 0;
   font-weight: 500;
@@ -39,9 +38,15 @@
 }
 
 .menu > li {
+  width: 100%; /* o un valor fijo como 150px si estás en horizontal */
+  text-align: center;
   position: relative;
   cursor: pointer;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;      /* evita salto de línea */
 }
 
 .menu > li:hover {
@@ -81,10 +86,11 @@
 
 /* Usuario */
 .usuario-info {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 15px;
   margin-right: 40px;
+  width: 220px;
 }
 
 .usuario-nombre {
@@ -118,4 +124,75 @@
 .logout-btn:hover {
   background-color: #e0f7ec;
   border-radius: 5px;
+}
+
+/* Ocultar la cabecera hacia arriba */
+.cabecera.oculta {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Media query pantallas pequeñas, tablets y móviles */
+@media (max-width: 1200px) {
+  .cabecera {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo {
+    max-width: 180px;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .menu > li {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .submenu {
+    position: static; /* Hace que el submenú no se salga del flujo */
+    border: none;
+    box-shadow: none;
+    padding-left: 0;
+  }
+
+  .submenu li {
+    padding: 8px;
+  }
+
+  .usuario-info {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  #btnsCabecera {
+    display: flex;
+    gap: 10px;
+  }
+
+  #btnsCabecera button,
+  .logout-btn {
+    width: auto;
+  }
 }

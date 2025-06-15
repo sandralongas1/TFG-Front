@@ -1,8 +1,8 @@
 import React from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiLogOut, FiLogIn } from "react-icons/fi"; // Iconos
 import { FaHeart, FaUser } from "react-icons/fa"; // Iconos
-import { GiShoppingCart } from "react-icons/gi"; // Iconos
 import { FaCartShopping } from "react-icons/fa6"; // Iconos
 import "./Cabecera.css";
 
@@ -20,17 +20,38 @@ function Cabecera() {
   };
 
   const handleLikes = () => {
-    //navigate("/login");
+    navigate("/productosFavoritos");
   };
 
   const handleShoppingCart = () => {
-    //navigate("/login");
+    navigate("/carrito");
   };
 
   const handleUserProfile = () => {
-    //navigate("/login");
+    navigate("/perfil");
   };
   
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector(".cabecera");
+  
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Scroll hacia abajo → ocultar cabecera
+        header.classList.add("oculta");
+      } else {
+        // Scroll hacia arriba → mostrar cabecera
+        header.classList.remove("oculta");
+      }
+      lastScrollY = window.scrollY;
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="cabecera">
@@ -43,7 +64,7 @@ function Cabecera() {
             <li onClick={() => navigate("/productos?idCategoria=2")}>Plantas de Exterior</li>
             <li onClick={() => navigate("/productos?idCategoria=3")}>Cactus y Suculentas</li>
             <li onClick={() => navigate("/productos?idCategoria=4")}>Orquídeas</li>
-            <li onClick={() => navigate("/productos?grupo=productos")}>Productos/Accesorios</li>
+            <li onClick={() => navigate("/productos?grupo=productos")}>Productos / Accesorios</li>
             {role == "ADMIN" && 
               <li>
                 Administrador
@@ -60,6 +81,9 @@ function Cabecera() {
                   <li onClick={() => navigate("/admin/usuarios")}>
                     Usuarios
                   </li>
+                  <li onClick={() => navigate("/admin/ventas/0")}>
+                    Ventas
+                  </li>
                 </ul>
               </li>
             }
@@ -73,7 +97,7 @@ function Cabecera() {
         {usuario && (
           <div id="btnsCabecera">
             <button id="btnLikes" onClick={handleLikes} title="Tus favoritos">
-              <FaHeart size={20} />
+              <FaHeart size={20} color="red" />
             </button>
             <button id="btnShoppingCart" onClick={handleShoppingCart} title="Carrito de compra">
               <FaCartShopping size={20} />

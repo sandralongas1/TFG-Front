@@ -85,6 +85,9 @@ body, html{
     text-align: center;
     box-shadow: 0 2px 8px rgba(247, 147, 147, 0.05);
     transition: transform 0.3s;
+    background-repeat: no-repeat;       /* Evita que la imagen se repita */
+    background-size: cover;              /* La imagen cubre todo el div, adaptándose */
+    
 }
 
 .feature-card:hover {

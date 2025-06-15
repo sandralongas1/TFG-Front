@@ -36,6 +36,22 @@ export async function producto_listarActivosFiltro(filtro) {
     }
 }
 
+export async function producto_listarActivosFiltroIds(filtro) {
+  try {
+      const response = await fetch(`${API_URL}/listarActivosFiltroIds`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(filtro),
+        });
+    if (!response.ok) throw new Error("Error al listar los productos");
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+}
+
 export async function obtenerProducto(id) {
   try {
     const response = await fetch(`${API_URL}/${id}`);
@@ -88,4 +104,19 @@ export async function eliminarProducto(id) {
   } catch (error) {
     throw error;
   }
+}
+
+export function agregarProductoCarrito(producto){
+  console.log("Añadir al carrito: ", producto);
+  const variable_carrito = localStorage.getItem("TFC_productosCarrito");
+  const carrito = variable_carrito ? JSON.parse(variable_carrito) : []; 
+  const existe = carrito.some(item => item.id === producto.id);
+  if (existe){
+      alert("El producto ya existe en el carrito");
+  }else{
+    const p = { id: producto.id, cantidad: 1 };
+    carrito.push(p);
+    localStorage.setItem("TFC_productosCarrito", JSON.stringify(carrito));
+    alert("Producto añadido al carrito");
+  }  
 }
