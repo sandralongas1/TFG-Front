@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Cabecera from '../shared/Cabecera';
-import "./Home1.css";
+import "./Home.css";
 
 export default function Home() {
 

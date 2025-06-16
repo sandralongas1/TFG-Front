@@ -1,83 +1,48 @@
-/* Reset básico y tipografía */
-body, html {
+
+body, html{
+    /* margin: 0 auto;  */
+    /* display: flex;  */
+    justify-content: center; 
+    /* align-items: center;  */
+}
+
+/* frontal Section */
+.frontal {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-}
-  
-.container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navegación */
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-    align-items: center;
-}
-
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #cdeac0;
-}
-
-.nav-button {
-    background-color: #cdeac0;
-    color: #1a421d;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: #b2d8a5;
-}
-
-/* Hero Section */
-.hero {
-    background: url('/assets/bg-plants.jpg') center/cover no-repeat;
     height: 400px;
-    display: flex;
+    background: url('/img/frontal.jpg') center/cover no-repeat;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-radius: 8px;
 }
-/**/
 
-.hero-text {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
+.frontal-text {
+    background-color: rgba(26, 99, 35, 0.5);
+    text-align: center;
+    justify-content: center;
+    /* padding: 2rem; */
     border-radius: 12px;
     color: #fff;
-    max-width: 700px;
+    /* max-width: 700px; */
+    height: 100%;
 }
-
-.hero-text h2 {
-    font-size: 2.5rem;
+.frontal-text :nth-child(1) {
+    padding-top: 10%;
+}
+  
+.frontal-text h4 {
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.hero-text p {
+.frontal-text p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
-.hero-button {
+.frontal-button {
     background-color: #cdeac0;
     color: #1a421d;
     padding: 0.75rem 1.5rem;
@@ -87,17 +52,27 @@ body, html {
     transition: background-color 0.3s;
 }
 
-.hero-button:hover {
+.frontal-button:hover {
     background-color: #a9d196;
 }
 
 /* Features Section */
+/* Fondo específico por tarjeta */
+.feature-card:nth-child(1) {
+    background-image: url('/img/aromati.jpg'); /* Planta autóctona */
+}
+.feature-card:nth-child(2) {
+    background-image: url('/img/helecho.jpg'); /* Planta tropical */
+}
+.feature-card:nth-child(3) {
+    background-image: url('/img/cactus.jpg'); /* Consejos */
+}
+
 .features {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 3rem auto;
-    gap: 2rem;
+    margin: 30px auto;
 }
 
 .feature-card {
@@ -106,8 +81,11 @@ body, html {
     border-radius: 12px;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(247, 147, 147, 0.05);
     transition: transform 0.3s;
+    background-repeat: no-repeat;       /* Evita que la imagen se repita */
+    background-size: cover;              /* La imagen cubre todo el div, adaptándose */
+    margin: 10px;
 }
 
 .feature-card:hover {
@@ -122,13 +100,14 @@ body, html {
 }
 
 .feature-card h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: #1a421d;
+    /* margin-top: 1rem; */
+    font-size: 1.6rem;
+    color: whitesmoke;
+    box-shadow: 0 2px 28px rgba(46, 15, 15, 0.05);
 }
 
 .feature-card p {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: #555;
 }
 
@@ -161,21 +140,7 @@ body, html {
     }
 }
 
-@media (min-width: 1201px) {
-    .container {
-        max-width: 1400px; /* más ancho para pantallas grandes */
-        padding: 0 2rem;   /* un poco más de padding */
-    }
-
-    .features {
-        gap: 3rem; /* más espacio entre tarjetas */
-    }
-
-    .hero-text {
-        max-width: 900px; /* texto más ancho para hero */
-    }
-    }
-    @media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .features {
         flex-direction: row; /* mantiene fila */
         gap: 1.5rem;
@@ -191,5 +156,20 @@ body, html {
 
     .hero-text p {
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .container {
+        max-width: 1400px; /* más ancho para pantallas grandes */
+        padding: 0 2rem;   /* un poco más de padding */
+    }
+
+    .features {
+        gap: 3rem; /* más espacio entre tarjetas */
+    }
+
+    .hero-text {
+        max-width: 900px; /* texto más ancho para hero */
     }
 }
