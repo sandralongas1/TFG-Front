@@ -1,0 +1,39 @@
+.consejos-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .titulo-principal {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f855a; /* verde oscuro */
+    margin-bottom: 1.5rem;
+  }
+  
+  .grid-consejos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card-consejo {
+    background-color: #f0fff4; /* verde muy claro */
+    border-left: 5px solid #2f855a;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-consejo h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #276749;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-consejo p {
+    color: #4a5568;
+    font-size: 1rem;
+  }
+  

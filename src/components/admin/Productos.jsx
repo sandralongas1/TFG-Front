@@ -6,6 +6,8 @@ import { TiDelete } from "react-icons/ti";   //delete icon
 import { MdModeEdit } from "react-icons/md"; //edit icon
 import { FaUserPlus } from "react-icons/fa"; //add icon
 import { producto_listar, eliminarProducto } from "../../services/ProductoService";
+import Loader from "../all/Loader";
+import ErrorPage from "../error/ErrorPage";
 
 function Productos() {
   const navigate = useNavigate();
@@ -29,8 +31,8 @@ function Productos() {
       });
   }
 
-  if (loading) return <p>Cargando productos...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage message="No se pudieron cargar los productos" />;
 
   const borrarProducto = (id) => {
     if (window.confirm('¿Estás seguro de que quieres borrar este producto?')) {

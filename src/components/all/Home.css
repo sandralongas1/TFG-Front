@@ -46,10 +46,12 @@ body, html{
     background-color: #cdeac0;
     color: #1a421d;
     padding: 0.75rem 1.5rem;
+    border: none;
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .frontal-button:hover {
@@ -86,6 +88,7 @@ body, html{
     background-repeat: no-repeat;       /* Evita que la imagen se repita */
     background-size: cover;              /* La imagen cubre todo el div, adaptándose */
     margin: 10px;
+    cursor: pointer;
 }
 
 .feature-card:hover {

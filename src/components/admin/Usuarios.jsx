@@ -6,6 +6,8 @@ import { TiDelete } from "react-icons/ti";   //delete icon
 import { MdModeEdit } from "react-icons/md"; //edit icon
 import { FaUserPlus } from "react-icons/fa"; //add icon
 import { usuario_listar, eliminarUsuario } from "../../services/UsuarioService";
+import Loader from "../all/Loader";
+import ErrorPage from "../error/ErrorPage";
 
 function Usuarios() {
   const navigate = useNavigate();
@@ -29,8 +31,8 @@ function Usuarios() {
       });
   }
 
-  if (loading) return <p>Cargando usuarios...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage message="No se pudieron cargar los usuarios" />;
 
   const borrarUsuario = (id) => {
     if (window.confirm('¿Estás seguro de que quieres borrar este usuario?')) {

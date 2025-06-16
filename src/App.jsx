@@ -17,6 +17,7 @@ import ProductosFavoritos from './components/all/ProductosFavoritos';
 import CarritoCompra from './components/all/CarritoCompra';
 import UsuarioPerfil from './components/all/UsuarioPerfil';
 import CompraConfirmada from './components/all/CompraConfirmada';
+import Consejos from './components/all/Consejos';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/carrito" element={<CarritoCompra />} />
         <Route path="/perfil" element={<UsuarioPerfil />} />
         <Route path="/compra-confirmada" element={<CompraConfirmada />} />
+        <Route path="/consejos" element={<Consejos />} />
 
         <Route path="/admin/categorias" element={<PrivateRoute role="ADMIN"><AdminCategorias /></PrivateRoute>} />
         <Route path="/admin/subcategorias" element={<PrivateRoute role="ADMIN"><AdminSubcategorias /></PrivateRoute>} />

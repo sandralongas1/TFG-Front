@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { login } from "../services/UsuarioService";
 import Cabecera from './shared/Cabecera';
 import "./Login.css";
+import Loader from "./all/Loader";
 
 export default function Login() {
   const [usuario, setUsuario] = useState("");
@@ -62,7 +63,7 @@ export default function Login() {
     }
   };
 
-  if (loading) return <p>Cargando sesión...</p>;
+  if (loading) return <Loader />;
 
   return (
     <div>

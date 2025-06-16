@@ -4,6 +4,7 @@ import { subcategoria_listarActivosFiltro } from "../../services/SubcategoriaSer
 import { obtenerProducto, crearProducto, editarProducto } from "../../services/ProductoService";
 import Cabecera from "../shared/Cabecera";
 import "../shared/Form.css";
+import Loader from "../all/Loader";
 
 export default function ProductoForm() {
     const { id } = useParams();
@@ -91,7 +92,7 @@ export default function ProductoForm() {
         }
     };
 
-    if (loading) return <p>Cargando datos del producto...</p>;
+    if (loading) return <Loader />;
 
     return (
         <div id="main-container">

@@ -4,6 +4,8 @@ import "./ProductosFavoritos.css";
 import ProductoFila from "./ProductoFila";
 import { producto_listarActivosFiltroIds, agregarProductoCarrito } from "../../services/ProductoService";
 import { TiDelete } from "react-icons/ti";   //delete icon 
+import Loader from "./Loader";
+import ErrorPage from "../error/ErrorPage";
 
 function ProductosFavoritos() {
 const [productos, setProductos] = useState([]);
@@ -49,8 +51,8 @@ const handleDeleteAll = () => {
     cargarProductos([]);
 };
 
-if (loading) return <p>Cargando productos...</p>;
-if (error) return <p>Error: {error}</p>;
+if (loading) return <Loader />;
+if (error) return <ErrorPage message="No se pudieron cargar los productos favoritos" />;
 
   return (
     <div id="main-container">

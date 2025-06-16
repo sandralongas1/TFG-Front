@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { subcategoria_listarActivosFiltro } from "../../services/SubcategoriaService";
+import Loader from "./Loader";
+import ErrorPage from "../error/ErrorPage";
 
 const SubcategoriasFiltro = ({ idCategoria, grupo, onChange }) => {
   const [subcategorias, setSubcategorias] = useState([]);
@@ -39,8 +41,8 @@ const SubcategoriasFiltro = ({ idCategoria, grupo, onChange }) => {
     onChange?.(nuevasSeleccionadas); // Notifica al padre si lo desea
   };
 
-  if (loading) return <p>Cargando subcategorias...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage message="No se pudieron cargar las subcategorias" />;
 
   return (
     <div className="filtro-subcategorias">

@@ -5,6 +5,8 @@ import SubcategoriasFiltro from "./SubcategoriasFiltro"
 import ProductoCard from "./ProductoCard";
 import { producto_listarActivosFiltro } from "../../services/ProductoService";
 import { useSearchParams } from "react-router-dom";
+import Loader from "./Loader";
+import ErrorPage from "../error/ErrorPage";
 
 function Productos() {
   const [searchParams] = useSearchParams();
@@ -46,8 +48,8 @@ function Productos() {
     cargarProductos(filtro);
   };
 
-  if (loading) return <p>Cargando productos...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage message="No se pudieron cargar los productos" />;
 
   return (
     <div id="main-container">

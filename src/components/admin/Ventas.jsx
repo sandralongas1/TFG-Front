@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./Admin.css";
 import Cabecera from "../shared/Cabecera";
 import { venta_listar } from "../../services/VentaService";
+import Loader from "../all/Loader";
+import ErrorPage from "../error/ErrorPage";
 
 function Ventas() {
   const { usuarioId } = useParams();
@@ -31,8 +33,8 @@ function Ventas() {
       });
   }
 
-  if (loading) return <p>Cargando ventas...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage message="No se pudieron cargar las ventas" />;
 
   return (
     <div id ="main-container">

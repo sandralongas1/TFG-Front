@@ -16,22 +16,22 @@
 }
 
 @media (max-width: 1200px) {
-    .container {
-      flex-direction: column;
-    }
-
-    .titulo {
-        text-align: center;
-    }
-  
-    .productos-filter {
-      width: 100%;
-      margin-bottom: 20px; /* espacio abajo */
-      text-align: center;
-    }
-  
-    .productos-container {
-      width: 100%;
-    }
+  .container {
+    flex-direction: column;
   }
+
+  .titulo {
+      text-align: center;
+  }
+
+  .productos-filter {
+    width: 100%;
+    margin-bottom: 20px; /* espacio abajo */
+    text-align: center;
+  }
+
+  .productos-container {
+    width: 100%;
+  }
+}
   

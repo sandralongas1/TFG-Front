@@ -7,6 +7,8 @@ import { producto_listarActivosFiltroIds } from "../../services/ProductoService"
 import { venta_registrar } from "../../services/VentaService";
 import { TiDelete } from "react-icons/ti";   //delete icon 
 import { FaCartShopping } from "react-icons/fa6"; // Iconos
+import Loader from "./Loader";
+import ErrorPage from "../error/ErrorPage";
 
 function CarritoCompra() {
   const navigate = useNavigate();
@@ -91,7 +93,7 @@ function CarritoCompra() {
     }
     else if (nuevaCantidad > 20){
       producto.cantidad = 20;
-      alert("La cantidad mínima permitida es 1");
+      alert("La cantidad máxima permitida es 20");
     }
     else{
       producto.cantidad = Number(nuevaCantidad);
@@ -145,8 +147,8 @@ function CarritoCompra() {
       });
   };
 
-  if (loading) return <p>Cargando productos del carrito...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage message="No se pudo cargar el carrito" />;
 
   return (
     <div id="main-container">

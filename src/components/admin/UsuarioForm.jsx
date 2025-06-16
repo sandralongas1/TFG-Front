@@ -4,6 +4,7 @@ import { perfil_listar } from "../../services/PerfilService";
 import { obtenerUsuario, crearUsuario, editarUsuario } from "../../services/UsuarioService";
 import Cabecera from "../shared/Cabecera";
 import "../shared/Form.css";
+import Loader from "../all/Loader";
 
 export default function UsuarioForm({rol}) {
     const { id } = useParams();
@@ -72,7 +73,7 @@ export default function UsuarioForm({rol}) {
             .catch((error) => console.error(error));
     };
 
-    if (loading) return <p>Cargando datos del usuario...</p>;
+    if (loading) return <Loader />;
 
     return (
         <div id="main-container">
